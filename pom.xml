@@ -14,6 +14,7 @@
   ~
   ~ Copyright 2015 ForgeRock AS.
   ~ Portions Copyrighted 2019 Open Source Solution Technology Corporation
+  ~ Portions Copyrighted 2019 OGIS-RI Co., Ltd.
   -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -47,12 +48,6 @@
         <url>https://github.com/openam-jp/forgerock-bloomfilter</url>
     </scm>
 
-    <properties>
-        <hdrhistogram.version>2.1.4</hdrhistogram.version>
-        <jsr.305.version>3.0.0</jsr.305.version>
-        <slf4j.version>1.7.5</slf4j.version>
-    </properties>
-
     <modules>
         <module>bloomfilter-core</module>
         <module>bloomfilter-monitoring</module>
@@ -67,25 +62,8 @@
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
-            <dependency>
-                <groupId>com.google.code.findbugs</groupId>
-                <artifactId>jsr305</artifactId>
-                <version>${jsr.305.version}</version>
-                <optional>true</optional>
-            </dependency>
-            <dependency>
-                <groupId>org.hdrhistogram</groupId>
-                <artifactId>HdrHistogram</artifactId>
-                <version>${hdrhistogram.version}</version>
-            </dependency>
 
             <!-- Test dependencies -->
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-jcl</artifactId>
-                <version>${slf4j.version}</version>
-                <scope>test</scope>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -109,7 +87,6 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-jcl</artifactId>
-            <version>${slf4j.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
